@@ -15,32 +15,6 @@
     };
 
     behaviors {
-        fofunc: four_ffour {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FOUR_FUNCFOUR";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp F4>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-        sleft: s_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "S_LEFT";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&kp LEFT>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        fright: f_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "R_RIGHT";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp RIGHT>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
     };
 
     keymap {
@@ -55,10 +29,10 @@
             // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
 
             bindings = <
-&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0  &kp ENTER
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P   &kp A
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp O   &kp A
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none   &kp BACKSPACE
+&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0   &kp ENTER
+&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P    &kp LBKT
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp SEMI &mt RSHFT SQT
+&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none    &kp BACKSPACE
                            &kp LEFT_WIN  &kp LALT      &kp SPACE  &mo 1       &mo 2       &mo 3   &kp ENTER  &none
             >;
         };
