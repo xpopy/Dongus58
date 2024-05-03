@@ -60,7 +60,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans                            &trans        &trans    &trans    &trans    &trans        &trans
 &trans      &trans        &trans  &trans  &trans  &trans                            &kp SE_PLUS   &kp SE_7  &kp SE_8  &kp SE_9  &kp SE_EQL    &trans
 &trans      &trans        &trans  &trans  &trans  &trans  &trans       &trans       &kp SE_MINS   &kp SE_4  &kp SE_5  &kp SE_6  &kp SE_SLSH   &trans
-&trans      &trans        &trans  &trans  &trans  &trans  &sys_reset   &sys_reset   &kp SE_AST    &kp SE_1  &kp SE_2  &kp SE_3  &kp ENTER     &trans
+&trans      &trans        &trans  &trans  &trans  &trans  &sys_reset   &sys_reset   &kp SE_ASTR   &kp SE_1  &kp SE_2  &kp SE_3  &kp ENTER     &trans
                                   &trans  &trans  &trans  &bootloader  &bootloader  &trans        &kp SE_0  &kp SE_COMM
             >;
 
