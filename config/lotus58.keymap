@@ -7,21 +7,26 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <keymap_swedish.h>
+
+#define DEFAULT 0
+#define NAV 1
+#define SPECIAL 2
+#define KEYPAD 3
 
 / {
-    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0    &kp ENTER
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P     &kp LBKT
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none     &kp BACKSPACE
-                           &kp LEFT_WIN  &kp LALT      &kp SPACE  &mo 1       &mo 2       &mo 3   &kp ENTER  &none
+            // SE_ keys come from keymap_swedish.h
+&kp ENTER  &kp SE_1  &kp SE_2  &kp SE_3        &kp SE_4    &kp SE_5                           &kp SE_6    &kp SE_7   &kp SE_8   &kp SE_9 &kp SE_0     &kp ENTER
+&kp TAB    &kp Q     &kp W     &kp E           &kp R       &kp T                              &kp Y       &kp U      &kp I      &kp O    &kp P        &kp SE_ARNG
+&kp LSHFT  &kp A     &kp S     &kp D           &kp F       &kp G      &none       &none       &kp H       &kp J      &kp K      &kp L    &kp SE_ODIA  &kp SE_ADIA
+&kp LCTRL  &kp Z     &kp X     &kp C           &kp V       &kp B      &kp ESCAPE  &kp DELETE  &kp N       &kp M      &kp COMMA  &kp DOT  &none        &kp BACKSPACE
+                               &kp LEFT_WIN    &kp LALT    &kp SPACE  &mo NAV     &mo SPECIAl &mo KEYPAD  &kp ENTER  &none
             >;
 
             label = "Default";
@@ -41,11 +46,11 @@
 
         special_layer {
             bindings = <
-&trans  &trans      &trans  &trans        &trans           &trans                         &trans        &trans                &trans                 &trans             &trans     &trans
-&trans  &kp DOLLAR  &kp AT  &kp PERCENT   &kp AMPS         &kp PIPE                       &kp PLUS      &kt LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp CARET  &trans
-&trans  &none       &none   &kp HASH      &kp SLASH        &kp BACKSLASH  &trans  &trans  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp TILDE  &kp BSPC
-&trans  &none       &none   &kp KP_EQUAL  &kp EXCLAMATION  &kp QUESTION   &trans  &trans  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans     &trans
-                            &trans        &trans           &trans         &trans  &trans  &trans        &kt LESS_THAN         &kp GREATER_THAN
+&trans  &trans       &trans     &trans        &trans         &trans                        &trans        &trans         &trans        &trans        &trans       &trans
+&trans  &kp SE_DLR   &kp SE_AT  &kp SE_PERC   &kp SE_AMPR    &kp SE_PIPE                   &kp SE_PLUS   &kt SE_LCBR    &kp SE_RCBR   &kp SE_GRAVE  &kp SE_CIRC  &trans
+&trans  &kp SE_EURO  &none      &kp SE_HASH   &kp SE_SLSH    &kp SE_BSLS   &trans  &trans  &kp SE_MINS   &kp SE_LPRN    &kp SE_RPRN   &kp SE_QUOT   &kp SE_TILD  &trans
+&trans  &kp SE_PND   &none      &kp SE_EQL    &kp SE_EXLM    &kp SE_QUES   &trans  &trans  &kp SE_ASTR   &kp SE_LBRC    &kp SE_RBRC   &kp SE_DQUO   &trans       &trans
+                                &trans        &trans         &trans        &trans  &trans  &trans        &kt SE_LABK    &kp SE_RABK
             >;
 
             label = "Special";
@@ -53,11 +58,11 @@
 
         keypad_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans                            &trans        &trans           &trans           &trans           &trans         &trans
-&trans      &trans        &trans  &trans  &trans  &trans                            &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL   &trans
-&trans      &trans        &trans  &trans  &trans  &trans  &trans       &trans       &kp MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE  &trans
-&trans      &trans        &trans  &trans  &trans  &trans  &sys_reset   &sys_reset   &kp ASTERISK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER      &trans
-                                  &trans  &trans  &trans  &bootloader  &bootloader  &trans        &kp KP_NUMBER_0  &kp KP_COMMA
+&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans                            &trans        &trans    &trans    &trans    &trans        &trans
+&trans      &trans        &trans  &trans  &trans  &trans                            &kp SE_PLUS   &kp SE_7  &kp SE_8  &kp SE_9  &kp SE_EQL    &trans
+&trans      &trans        &trans  &trans  &trans  &trans  &trans       &trans       &kp SE_MINS   &kp SE_4  &kp SE_5  &kp SE_6  &kp SE_SLSH   &trans
+&trans      &trans        &trans  &trans  &trans  &trans  &sys_reset   &sys_reset   &kp SE_AST    &kp SE_1  &kp SE_2  &kp SE_3  &kp ENTER     &trans
+                                  &trans  &trans  &trans  &bootloader  &bootloader  &trans        &kp SE_0  &kp SE_COMM
             >;
 
             label = "Keypad";
