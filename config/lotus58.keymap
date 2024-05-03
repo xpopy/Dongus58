@@ -27,10 +27,10 @@
             // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
 
             bindings = <
-&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0  &kp ENTER
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P   &kp A
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp O   &kp A
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none   &kp BACKSPACE
+&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0     &kp ENTER
+&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P      &kp LBKT
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none      &kp BACKSPACE
                            &kp LEFT_WIN  &kp LALT      &kp SPACE  &mo 1       &mo 2       &mo 3   &kp ENTER  &none
             >;
         };
@@ -61,7 +61,7 @@
             //                     |       |       |      |      |  |      |      |      |       |
 
             bindings = <
-&none   &none       &none   &none         &none            &none                          &none         &none                 &none                  &trans             &sys_reset  &bootloader
+&trans  &trans      &trans  &trans        &trans           &trans                         &trans        &trans                &trans                 &trans             &trans      &trans
 &trans  &kp DOLLAR  &kp AT  &kp PERCENT   &kp AMPS         &kp PIPE                       &kp PLUS      &kt LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp CARET   &trans
 &trans  &none       &none   &kp HASH      &kp SLASH        &kp BACKSLASH  &trans  &trans  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp TILDE   &kp BSPC
 &trans  &none       &none   &kp KP_EQUAL  &kp EXCLAMATION  &kp QUESTION   &trans  &trans  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans      &trans
