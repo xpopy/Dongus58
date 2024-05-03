@@ -10,25 +10,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-    };
-
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0     &kp ENTER
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P      &kp LBKT
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none      &kp BACKSPACE
+&kp ENTER  &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9   &kp N0    &kp ENTER
+&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                              &kp Y   &kp U      &kp I      &kp O    &kp P     &kp LBKT
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G      &sys_reset  &sys_reset  &kp H   &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B      &kp ESCAPE  &kp DELETE  &kp N   &kp M      &kp COMMA  &kp DOT  &none     &kp BACKSPACE
                            &kp LEFT_WIN  &kp LALT      &kp SPACE  &mo 1       &mo 2       &mo 3   &kp ENTER  &none
             >;
+
+            label = "Default";
         };
 
-        lower_layer {
+        nav_layer {
             bindings = <
 &kp ENTER  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7    &kp F8        &kp F9     &kp F10        &kp F11
 &trans     &none   &none   &none   &none   &none                   &none   &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &kp F12
@@ -36,19 +35,23 @@
 &trans     &none   &none   &none   &none   &none   &trans  &trans  &none   &none     &none         &none      &none          &kp BACKSPACE
                            &trans  &trans  &trans  &trans  &trans  &trans  &trans    &none
             >;
+
+            label = "Naigation";
         };
 
-        raise_layer {
+        special_layer {
             bindings = <
-&trans  &trans      &trans  &trans        &trans           &trans                         &trans        &trans                &trans                 &trans             &trans      &trans
-&trans  &kp DOLLAR  &kp AT  &kp PERCENT   &kp AMPS         &kp PIPE                       &kp PLUS      &kt LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp CARET   &trans
-&trans  &none       &none   &kp HASH      &kp SLASH        &kp BACKSLASH  &trans  &trans  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp TILDE   &kp BSPC
-&trans  &none       &none   &kp KP_EQUAL  &kp EXCLAMATION  &kp QUESTION   &trans  &trans  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans      &trans
+&trans  &trans      &trans  &trans        &trans           &trans                         &trans        &trans                &trans                 &trans             &trans     &trans
+&trans  &kp DOLLAR  &kp AT  &kp PERCENT   &kp AMPS         &kp PIPE                       &kp PLUS      &kt LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp CARET  &trans
+&trans  &none       &none   &kp HASH      &kp SLASH        &kp BACKSLASH  &trans  &trans  &kp MINUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp TILDE  &kp BSPC
+&trans  &none       &none   &kp KP_EQUAL  &kp EXCLAMATION  &kp QUESTION   &trans  &trans  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &trans     &trans
                             &trans        &trans           &trans         &trans  &trans  &trans        &kt LESS_THAN         &kp GREATER_THAN
             >;
+
+            label = "Special";
         };
 
-        layer_3 {
+        keypad_layer {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans                            &trans        &trans           &trans           &trans           &trans         &trans
 &trans      &trans        &trans  &trans  &trans  &trans                            &kp PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL   &trans
@@ -56,6 +59,8 @@
 &trans      &trans        &trans  &trans  &trans  &trans  &sys_reset   &sys_reset   &kp ASTERISK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER      &trans
                                   &trans  &trans  &trans  &bootloader  &bootloader  &trans        &kp KP_NUMBER_0  &kp KP_COMMA
             >;
+
+            label = "Keypad";
         };
     };
 };
