@@ -21,7 +21,6 @@
 
         default_layer {
             bindings = <
-            // SE_ keys come from keymap_swedish.h
 &kp ENTER  &kp SE_1  &kp SE_2  &kp SE_3        &kp SE_4    &kp SE_5                           &kp SE_6    &kp SE_7   &kp SE_8   &kp SE_9 &kp SE_0     &kp ENTER
 &kp TAB    &kp Q     &kp W     &kp E           &kp R       &kp T                              &kp Y       &kp U      &kp I      &kp O    &kp P        &kp SE_ARNG
 &kp LSHFT  &kp A     &kp S     &kp D           &kp F       &kp G      &none       &none       &kp H       &kp J      &kp K      &kp L    &kp SE_ODIA  &kp SE_ADIA
@@ -34,11 +33,11 @@
 
         nav_layer {
             bindings = <
-&kp ENTER  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7    &kp F8        &kp F9     &kp F10        &kp F11
-&trans     &none   &none   &none   &none   &none                   &none   &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &kp F12
-&trans     &none   &none   &none   &none   &none   &trans  &trans  &none   &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&trans     &none   &none   &none   &none   &none   &trans  &trans  &none   &none     &none         &none      &none          &kp BACKSPACE
-                           &trans  &trans  &trans  &trans  &trans  &trans  &trans    &none
+&kp ENTER  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                   &kp F6  &kp F7    &kp F8        &kp F9     &kp F10        &kp F11
+&trans     &trans   &trans   &trans   &trans   &trans                   &none   &kp HOME  &kp UP_ARROW  &kp END    &kp PAGE_UP    &kp F12
+&trans     &trans   &trans   &trans   &trans   &trans   &trans  &trans  &none   &kp LEFT  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&trans     &trans   &trans   &trans   &trans   &trans   &trans  &trans  &none   &none     &none         &none      &none          &trans
+                             &trans   &trans   &trans   &trans  &trans  &trans  &trans    &none
             >;
 
             label = "Naigation";
@@ -47,10 +46,10 @@
         special_layer {
             bindings = <
 &trans  &trans       &trans     &trans        &trans         &trans                        &trans        &trans         &trans        &trans        &trans       &trans
-&trans  &kp SE_DLR   &kp SE_AT  &kp SE_PERC   &kp SE_AMPR    &kp SE_PIPE                   &kp SE_PLUS   &kt SE_LCBR    &kp SE_RCBR   &kp SE_GRAVE  &kp SE_CIRC  &trans
+&trans  &kp SE_DLR   &kp SE_AT  &kp SE_PERC   &kp SE_AMPR    &kp SE_PIPE                   &kp SE_PLUS   &kp SE_LCBR    &kp SE_RCBR   &kp SE_GRAVE  &kp SE_CIRC  &trans
 &trans  &kp SE_EURO  &none      &kp SE_HASH   &kp SE_SLSH    &kp SE_BSLS   &trans  &trans  &kp SE_MINS   &kp SE_LPRN    &kp SE_RPRN   &kp SE_QUOT   &kp SE_TILD  &trans
 &trans  &kp SE_PND   &none      &kp SE_EQL    &kp SE_EXLM    &kp SE_QUES   &trans  &trans  &kp SE_ASTR   &kp SE_LBRC    &kp SE_RBRC   &kp SE_DQUO   &trans       &trans
-                                &trans        &trans         &trans        &trans  &trans  &trans        &kt SE_LABK    &kp SE_RABK
+                                &trans        &trans         &trans        &trans  &trans  &trans        &kp SE_LABK    &kp SE_RABK
             >;
 
             label = "Special";
