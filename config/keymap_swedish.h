@@ -72,7 +72,7 @@
 #define SE_L    L    // L
 #define SE_ODIA SEMI // Ö
 #define SE_ADIA SQT  // Ä
-#define SE_QUOT KC_NUHS // '
+#define SE_QUOT NUHS // '
 // Row 4
 #define SE_LABK NUBS // <
 #define SE_Z    Z    // Z
