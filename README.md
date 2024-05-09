@@ -8,5 +8,5 @@ More details on the [slicemk page](https://www.slicemk.com/pages/split-dongle).
 
 ## Credit
 
-- [@TweetyDaBir](https://github.com/TweetyDaBird/Lotus58) for the Lotus58
+- [@TweetyDaBird](https://github.com/TweetyDaBird/Lotus58) for the Lotus58
 - [@aroum](https://github.com/aroum/zmk-enki42-dongle) for the template
