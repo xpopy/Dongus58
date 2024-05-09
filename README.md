@@ -1,4 +1,6 @@
-# ZMK config for Dongus58 with dongle
+# ZMK config for Dongus58 
+
+A fork of Lotus58 that includes config for a dongle 
 
 The config allows you to use 3 nRF52840, one for the dongle, one for the left half, one for the right half. Using a dongle significantly increases battery life.
 
@@ -10,4 +12,5 @@ Before flashing this firmware, flash the [settings reset firmware](https://zmk.d
 
 ## Credit
 
+- [@TweetyDaBir](https://github.com/TweetyDaBird/Lotus58) for the Lotus58
 - [@aroum](https://github.com/aroum/zmk-enki42-dongle) for the template
