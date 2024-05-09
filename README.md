@@ -6,10 +6,6 @@ The config allows you to use 3 nRF52840, one for the dongle, one for the left ha
 
 More details on the [slicemk page](https://www.slicemk.com/pages/split-dongle).
 
-## Install
-
-Before flashing this firmware, flash the [settings reset firmware](https://zmk.dev/docs/troubleshooting#split-keyboard-halves-unable-to-pair) into all 3 controllers. Then flash each firmware to the respective device. If the halves do not connect themselves, try pressing the reset buttons on the dongle and keyboards.
-
 ## Credit
 
 - [@TweetyDaBir](https://github.com/TweetyDaBird/Lotus58) for the Lotus58
