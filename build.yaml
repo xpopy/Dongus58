@@ -20,6 +20,17 @@ include:
   - board: seeeduino_xiao_ble
     shield: dongus58_dongle
 
+# Debugging enabled
+  - board: seeeduino_xiao_ble
+    shield: dongus58_dongle
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: dongus58_dongle_with_logging
+
+  - board: nice_nano_v2
+    shield: dongus58_right
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: dongus58_right_with_logging
+
 # Reset firmware
   - board: nice_nano_v2
     shield: settings_reset
