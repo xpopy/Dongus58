@@ -1,4 +1,4 @@
-# ZMK config for Lotus58 with dongle
+# ZMK config for Dongus58 with dongle
 
 The config allows you to use 3 nRF52840, one for the dongle, one for the left half, one for the right half. Using a dongle significantly increases battery life.
 

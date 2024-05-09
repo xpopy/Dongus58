@@ -14,11 +14,11 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: lotus58_left
+    shield: dongus58_left
   - board: nice_nano_v2
-    shield: lotus58_right
+    shield: dongus58_right
   - board: seeeduino_xiao_ble
-    shield: lotus58_dongle
+    shield: dongus58_dongle
 
 # Reset firmware
   - board: nice_nano_v2

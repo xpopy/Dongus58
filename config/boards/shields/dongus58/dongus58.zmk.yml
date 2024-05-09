@@ -1,14 +1,13 @@
 file_format: "1"
-id: lotus58
-name: Lotus58
+id: dongus58
+name: Dongus58
 type: shield
 url: https://github.com/TweetyDaBird/Lotus58
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
-  - display
 siblings:
-  - lotus58_left
-  - lotus58_right
-  - lotus58_dongle
+  - dongus58_left
+  - dongus58_right
+  - dongus58_dongle

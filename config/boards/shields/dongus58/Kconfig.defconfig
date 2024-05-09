@@ -1,10 +1,10 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_LOTUS58_DONGLE
+if SHIELD_DONGUS58_DONGLE
 
 config ZMK_KEYBOARD_NAME
-	default "Lotus58 Dongle"
+	default "Dongus58 Dongle"
 	
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
@@ -14,7 +14,7 @@ config ZMK_USB
 
 endif
 
-if SHIELD_LOTUS58_LEFT || SHIELD_LOTUS58_RIGHT || SHIELD_LOTUS58_DONGLE 
+if SHIELD_DONGUS58_LEFT || SHIELD_DONGUS58_RIGHT || SHIELD_DONGUS58_DONGLE 
 
 config ZMK_SPLIT
 	default y
