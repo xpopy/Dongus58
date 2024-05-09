@@ -2,7 +2,7 @@
 
 A fork of Lotus58 that includes config for a dongle 
 
-The config allows you to use 3 nRF52840, one for the dongle, one for the left half, one for the right half. Using a dongle significantly increases battery life.
+The config allows you to use 3 nRF52840, one for the dongle, one for the left half, one for the right half.
 
 More details on the [slicemk page](https://www.slicemk.com/pages/split-dongle).
 
